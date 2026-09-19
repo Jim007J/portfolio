@@ -16,6 +16,9 @@
   --color-accent: #2856c7;
   --color-accent-tint: #e9effc;
   --color-error: #b3261e;
+  --color-cta-bg: #14161c;
+  --color-cta-text: #ffffff;
+  --color-cta-bg-hover: #000000;
 
   /* Typographie : serif pour les titres, système sans-serif pour le reste */
   --font-serif: Georgia, "Times New Roman", Times, serif;
@@ -36,6 +39,23 @@
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- 1bis. Thème sombre ---------- */
+:root[data-theme="dark"] {
+  --color-bg: #14161c;
+  --color-surface: #1c1f27;
+  --color-ink: #f2f3f6;
+  --color-ink-muted: #9aa3b2;
+  --color-border: #2e323d;
+  --color-accent: #6f95e8;
+  --color-accent-tint: #232b42;
+  --color-cta-bg: #f2f3f6;
+  --color-cta-text: #14161c;
+  --color-cta-bg-hover: #ffffff;
+}
+:root[data-theme="dark"] .hero__photo { border-color: var(--color-surface); }
+:root[data-theme="dark"] .cta-banner { background: #0b0c10; }
+:root[data-theme="dark"] .cta-banner .btn-primary { background: var(--color-cta-bg); color: var(--color-cta-text); }
 
 /* ---------- 2. Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -223,10 +243,10 @@ main > .breadcrumb {
 .btn:hover { transform: translateY(-1px); }
 
 .btn-primary, .btn-dark {
-  background: var(--color-ink);
-  color: #fff;
+  background: var(--color-cta-bg);
+  color: var(--color-cta-text);
 }
-.btn-primary:hover, .btn-dark:hover { background: #000; }
+.btn-primary:hover, .btn-dark:hover { background: var(--color-cta-bg-hover); }
 
 .btn-secondary {
   background: transparent;
@@ -236,6 +256,46 @@ main > .breadcrumb {
 .btn-secondary:hover { background: var(--color-ink); color: #fff; }
 
 .btn-header { display: none; }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform var(--transition), background var(--transition);
+}
+.theme-toggle:hover { transform: translateY(-1px); }
+
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 60;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-cta-bg);
+  color: var(--color-cta-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition), background var(--transition);
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover { background: var(--color-cta-bg-hover); }
+.back-to-top[hidden] { display: none; }
 .btn-small { padding: 0.5rem 1rem; font-size: 0.85rem; }
 .btn-submit { width: 100%; justify-content: center; }
 
@@ -440,7 +500,7 @@ main > .breadcrumb {
 .cta-banner .eyebrow { color: #b7bdc9; }
 .cta-banner h2 { color: #fff; }
 .cta-banner p { color: #d7dae0; }
-.cta-banner .btn-primary { background: #fff; color: var(--color-ink); }
+.cta-banner .btn-primary { background: #fff; color: #14161c; white-space: nowrap; }
 .cta-banner .btn-primary:hover { background: #e9effc; }
 
 /* ---------- 11. Contact ---------- */
