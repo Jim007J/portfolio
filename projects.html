@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets &amp; Travaux d'Analyse — Jim Turpin ODJO</title>
+  <meta name="description" content="Détail des projets de statistique et data analyse de Jim Turpin ODJO : détection de fraude, analyse prédictive, bases de données, séries temporelles.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html">
+        <span class="logo__name">Jim Turpin ODJO</span>
+        <span class="logo__tag">Statisticien &amp; Data Analyst</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="index.html#accueil">Accueil</a></li>
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#competences">Compétences</a></li>
+          <li><a href="projects.html" aria-current="page">Projets</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary btn-header" href="index.html#contact">Me contacter</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="sr-only">Ouvrir le menu</span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Navigation mobile" hidden>
+      <ul>
+        <li><a href="index.html#accueil">Accueil</a></li>
+        <li><a href="index.html#apropos">À propos</a></li>
+        <li><a href="index.html#competences">Compétences</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <p class="breadcrumb"><a href="index.html">← Retour à l'accueil</a></p>
+
+    <section class="section" aria-labelledby="page-title">
+      <div class="section__head">
+        <p class="eyebrow">Portfolio d'analyse quantitative</p>
+        <h1 id="page-title">Projets &amp; Travaux d'Analyse</h1>
+        <p class="page-lead">
+          Présentation des réalisations académiques et projets appliqués de Jim Turpin ODJO
+          (Master 1 Statistique Appliquée, Chaire UNESCO CIPMA, Bénin).
+        </p>
+      </div>
+
+      <ul class="stats-strip">
+        <li><span class="stats-strip__value">04</span> Études documentées</li>
+        <li><span class="stats-strip__value">Statistique &amp; ML</span> Approche</li>
+        <li><span class="stats-strip__value">100%</span> Pipelines reproductibles</li>
+      </ul>
+
+      <article id="projet-01" class="project-detail">
+        <p class="project-detail__meta">Projet #01 — Compétition <span>Data Tour</span> • Machine Learning</p>
+        <h2>Détection de fraude mobile money</h2>
+        <ul class="tag-list">
+          <li>Python</li><li>Scikit-learn</li><li>Pandas</li><li>SMOTE</li><li>Classification binaire</li>
+        </ul>
+
+        <div class="project-detail__grid">
+          <div>
+            <h3>1. Contexte</h3>
+            <p>
+              Participation à la compétition nationale Data Tour au sein d'une équipe de 3 personnes
+              dont Jim Turpin ODJO était le chef d'équipe. Le challenge portait sur la détection
+              d'opérations frauduleuses sur un volume important de transactions financières mobiles.
+            </p>
+          </div>
+          <div>
+            <h3>2. Méthode</h3>
+            <p>
+              Gestion du fort déséquilibre de classes (techniques de rééchantillonnage, SMOTE, poids
+              de classe), feature engineering ciblé sur les comportements anormaux de transaction,
+              entraînement et validation de modèles de classification.
+            </p>
+          </div>
+          <div>
+            <h3>3. Résultat</h3>
+            <p>
+              Classement national 11e sur 65 équipes concurrentes. Pipeline ML robuste permettant une
+              détection précoce des transactions frauduleuses avec minimisation rigoureuse des faux positifs.
+            </p>
+          </div>
+          <div>
+            <h3>4. Outils &amp; livrables</h3>
+            <p>
+              Python (Pandas, Scikit-learn, NumPy), pipeline ML reproductible (ingestion, prétraitement,
+              inférence), notebooks d'expérimentation et code de soumission nettoyé.
+            </p>
+          </div>
+        </div>
+        <p class="project-detail__stat">Classement : 11e / 65 équipes au niveau national</p>
+      </article>
+
+      <article id="projet-02" class="project-detail">
+        <p class="project-detail__meta">Projet #02 — Entreprise <span>CIIC SARL</span> • Business Analytics</p>
+        <h2>Analyse prédictive des ventes &amp; tableaux de bord</h2>
+        <ul class="tag-list">
+          <li>Python</li><li>Scikit-Learn</li><li>Power BI</li><li>k-means</li><li>CAH</li>
+        </ul>
+
+        <div class="project-detail__grid">
+          <div>
+            <h3>1. Contexte</h3>
+            <p>
+              Optimisation des performances commerciales et segmentation de la clientèle pour la société
+              CIIC SARL, confrontée au besoin de mieux comprendre ses profils d'acheteurs et d'anticiper
+              les volumes de vente.
+            </p>
+          </div>
+          <div>
+            <h3>2. Méthode</h3>
+            <p>
+              Nettoyage et structuration des historiques de vente, mise en place d'un algorithme de
+              segmentation clients combinant k-means et Classification Ascendante Hiérarchique (CAH),
+              et modélisation prédictive sous scikit-learn.
+            </p>
+          </div>
+          <div>
+            <h3>3. Résultat</h3>
+            <p>
+              Identification de groupes homogènes de clients facilitant le ciblage commercial et
+              restitution dynamique via un tableau de bord interactif Power BI permettant le suivi
+              des KPIs de vente en temps réel.
+            </p>
+          </div>
+          <div>
+            <h3>4. Outils &amp; livrables</h3>
+            <p>
+              Python &amp; Scikit-Learn (scripts de segmentation &amp; scoring), tableau de bord
+              décisionnel Power BI (.pbix interactif),algorithmes k-means et CAH documentés.
+            </p>
+          </div>
+        </div>
+        <p class="project-detail__stat">Livrable : dashboards Power BI &amp; modèles de clustering</p>
+      </article>
+
+      <article id="projet-03" class="project-detail">
+        <p class="project-detail__meta">Projet #03 — Système d'information <span>MAGENGO &amp; fils</span></p>
+        <h2>Base de données relationnelle MAGENGO &amp; fils</h2>
+        <ul class="tag-list">
+          <li>SQL</li><li>MCD / MLD</li><li>3e Forme Normale (3FN)</li><li>8 Entités</li><li>Requêtes KPI</li>
+        </ul>
+
+        <div class="project-detail__grid">
+          <div>
+            <h3>1. Contexte</h3>
+            <p>
+              Structuration et fiabilisation du stockage de données de gestion et d'activité de
+              l'entreprise MAGENGO &amp; fils, nécessitant une transition vers une base relationnelle
+              robuste pour remplacer les saisies dispersées.
+            </p>
+          </div>
+          <div>
+            <h3>2. Méthode</h3>
+            <p>
+              Conception du Modèle Conceptuel de Données (MCD) et Modèle Logique de Données (MLD),
+              normalisation stricte jusqu'à la 3e Forme Normale (3FN) sur 8 entités distinctes pour
+              éliminer toute redondance et garantir l'intégrité des relations.
+            </p>
+          </div>
+          <div>
+            <h3>3. Résultat</h3>
+            <p>
+              Schéma SQL relationnel optimisé, intégrité référentielle garantie sans aucune redondance,
+              et conception de requêtes SQL analytiques pour le suivi automatisé des indicateurs clés
+              de performance (KPI).
+            </p>
+          </div>
+          <div>
+            <h3>4. Outils &amp; livrables</h3>
+            <p>
+              Scripts DDL &amp; DML SQL complets, schéma relationnel (8 entités normalisées en 3FN)
+              — dictionnaire de données exhaustif, scripts de requêtes analytiques KPI.
+            </p>
+          </div>
+        </div>
+        <p class="project-detail__stat">Conforme 3FN — 8 entités normalisées</p>
+      </article>
+
+      <article id="projet-04" class="project-detail">
+        <p class="project-detail__meta">Projet #04 — Recherche agro-climatologique <span>1951–2014</span> • Séries temporelles</p>
+        <h2>Étude statistique des précipitations à Bembereke (1951–2014)</h2>
+        <ul class="tag-list">
+          <li>R</li><li>R Shiny</li><li>Séries temporelles</li><li>Moyennes mobiles</li><li>Tests de rupture</li>
+        </ul>
+
+        <div class="project-detail__grid">
+          <div>
+            <h3>1. Contexte</h3>
+            <p>
+              Analyse de l'évolution pluviométrique historique sur plus de 60 ans (période 1951–2014)
+              dans la région de Bembereke au Bénin, pour appréhender la variabilité climatique et ses
+              impacts sur les calendriers agricoles locaux.
+            </p>
+          </div>
+          <div>
+            <h3>2. Méthode</h3>
+            <p>
+              Traitement des données chronologiques avec lissage par moyennes mobiles, modélisation
+              de tendances par régression statistique et application de tests statistiques de rupture
+              (Pettitt, Buishand).
+            </p>
+          </div>
+          <div>
+            <h3>3. Résultat</h3>
+            <p>
+              Mise en évidence des cycles de rupture et des variations interannuelles, couplée au
+              développement d'une application web R Shiny interactive permettant l'exploration
+              dynamique et intuitive des séries temporelles par les agronomes et chercheurs.
+            </p>
+          </div>
+          <div>
+            <h3>4. Outils &amp; livrables</h3>
+            <p>
+              Environnement R &amp; scripts d'analyse chronologique, application web interactive
+              R Shiny, modèles de régression et séries temporelles documentés.
+            </p>
+          </div>
+        </div>
+        <p class="project-detail__stat">Profondeur historique : 63 ans (1951–2014)</p>
+      </article>
+
+      <div class="cta-banner">
+        <div>
+          <p class="eyebrow">Collaboration &amp; recrutement</p>
+          <h2>Un projet d'analyse ou un besoin d'appui statistique ?</h2>
+          <p>
+            Que vous soyez recruteur à la recherche d'un profil rigoureux en analyse de données
+            (stage, mission ou poste de data analyst), ou chercheur / doctorant en médecine ou
+            biostatistique nécessitant un appui méthodologique structuré, échangeons sur vos objectifs.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="index.html#contact">Me contacter →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p>Jim Turpin ODJO — Statisticien &amp; Data Analyst • Cotonou, Bénin</p>
+    <p class="site-footer__legal">© 2026 Jim Turpin ODJO. Tous droits réservés.</p>
+    <ul class="site-footer__links">
+      <li><a href="https://github.com/Jim007J" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jim-turpin-odjo-01718b300" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:odjoturpano@gmail.com">Email</a></li>
+      <li><a href="#">Mentions légales</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
