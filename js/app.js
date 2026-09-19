@@ -8,6 +8,57 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* -----------------------------------------------------------------
+     0. Thème clair / sombre
+  ----------------------------------------------------------------- */
+  var themeToggle = document.getElementById("theme-toggle");
+  var themeIcon = themeToggle ? themeToggle.querySelector(".theme-toggle__icon") : null;
+  var themeLabel = themeToggle ? themeToggle.querySelector(".sr-only") : null;
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    if (themeToggle) {
+      var isDark = theme === "dark";
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      if (themeIcon) themeIcon.textContent = isDark ? "☀️" : "🌙";
+      if (themeLabel) themeLabel.textContent = isDark ? "Activer le thème clair" : "Activer le thème sombre";
+    }
+  }
+
+  var savedTheme = localStorage.getItem("theme");
+  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var current = document.documentElement.getAttribute("data-theme");
+      var next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem("theme", next);
+    });
+  }
+
+  /* -----------------------------------------------------------------
+     0bis. Bouton "revenir en haut"
+  ----------------------------------------------------------------- */
+  var backToTop = document.getElementById("back-to-top");
+  if (backToTop) {
+    backToTop.hidden = false; // le JS gère désormais la visibilité via une classe
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 400) {
+        backToTop.classList.add("is-visible");
+      } else {
+        backToTop.classList.remove("is-visible");
+      }
+    });
+
+    backToTop.addEventListener("click", function () {
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
+
+  /* -----------------------------------------------------------------
      1. Menu mobile
   ----------------------------------------------------------------- */
   var toggle = document.querySelector(".nav-toggle");
